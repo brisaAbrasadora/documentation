@@ -1,0 +1,95 @@
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+}
+
+#logo {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#content-container {
+    display: flex;
+    justify-content: center;
+}
+
+#text-container {
+    width: 75%;
+}
+
+.grid-container {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 10px;
+    padding: 10px;
+}
+
+.grid-item {
+    border: 1px outset black;
+    overflow: auto;
+    height: 80vh;
+    padding: 0px 0px 0px 10px;
+    border-radius: 10px;
+}
+
+.grid-code {
+    display: grid;
+    width: 99%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.aside-category {
+    font-size: 1em;
+    font-weight: bold;
+
+}
+
+.code {
+    background-color: rgb(226, 226, 226);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    padding: 10px;
+    white-space: pre-wrap;
+}
+
+.result {
+    border-style: dashed;
+    border-width: 1px;
+    padding: 10px;
+}
+
+ul {
+    margin: 0px 0px 0px 10px;
+    padding: 0;
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:link:active,
+a:visited:active {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}

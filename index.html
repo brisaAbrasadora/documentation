@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Documentation</title>
+    <link rel="stylesheet" type="text/css" href="main.css" id="styles">
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+    <script src="navegator.js" defer></script>
+</head>
+
+<body>
+    <section id="header">
+        <img src="img/java-logo.png" id="logo" class="hidden">
+        <h1>Documentation</h1>
+    </section>
+    <section class="nav-container">
+        <nav id="mainNav">
+            <a name="java" href="#java">Java</a>
+            <a name="javascript" href="#javascript">JavaScript</a>
+            <a name="php" href="#php">PHP</a>
+            <a name="html" href="#html">HTML</a>
+            <a name="css" href="#css">CSS</a>
+            <a name="json" href="#json">JSON</a>
+        </nav>
+    </section>
+    <main id="content-container">
+        <!-- Start of Java content -->
+        <main id="java" class="grid-container hidden">
+            <aside class="grid-item">
+                <p class="aside-category">Data types</p>
+                <ul>
+                    <li>Section 1</li>
+                    <li>Section 2</li>
+                    <li>Section 3</li>
+                    <li>Section 4</li>
+                </ul>
+            </aside>
+            <section class="grid-item">
+
+            </section>
+        </main>
+        <!-- End of Java content -->
+        <!-- Start of JavaScript content -->
+        <main id="javascript" class="grid-container hidden">
+            <aside class="grid-item">
+                <p class="aside-category">NPX</p>
+                <ul>
+                    <li><a name="npx-def" href="#npx-def">Definition</a></li>
+                </ul>
+                <p class="aside-category">Objects</p>
+                <ul>
+                    <li><a name="obj-string-value" href="#obj-string-value">String value</a></li>
+                    <li><a name="obj-primitive-value" href="#obj-primitive-value">Primitive value</a></li>
+                    <li><a name="" href="">Destructuring objects</a></li>
+                    <li><a name="" href="">Combining objects</a></li>
+                </ul>
+                <p class="aside-category">Promises</p>
+            </aside>
+            <section class="grid-item">
+                <h2>NPX</h2>
+                <h3 id="npx-def">Definition</h3>
+                <p>To complete from class of 17/10/2023</p>
+                <h2>Objects</h2>
+                <h3 id="obj-string-value">String value</h3>
+                <p id="text-container">When an object is converted to a string, or printed directly, the <strong>toString()</strong> method
+                    inherited from the
+                    class <strong>Object</strong> is called. By default, it prints "[object Object]", but we can override the method on our class.</p>
+                <div class="grid-code">
+                    <pre class="code">
+// at person.class.js
+class Person {
+    #name;
+    #age;
+
+    constructor(name, age) {
+        this.#name = name;
+        this.#age = age;
+    };
+
+    <span class="highlight">toString() {</span>
+        <span class="highlight">return "My name is " . this.#name . " and I am " . this.#age;</span>
+    <span class="highlight">};</span>
+};
+
+//at index.js
+let person1 = new Person('Sabrina', 21);
+
+console.log(person1);</pre>
+                    <p class="result">My name is Sabrina and I am 21</p>
+                </div>
+                <h3 id="obj-primitive-value">Primitive value</h3>
+                <span class="highlight">
+                    <p id="text-container">When comparing objects using relational operators, the <strong>primitive value</strong> of the object
+                        is obtained and compared using the <strong>valueOf()</strong> method inherited from the class <strong>Object</strong>.</p>
+                </span>
+                <div class="grid-code">
+                    <pre class="code">
+// at person.class.js
+class Person {
+    #name;
+    #age;
+
+    constructor(name, age) {
+        this.#name = name;
+        this.#age = age;
+    };
+
+    toString() {
+        return this.#name;
+    }
+
+    <span class="highlight">valueOf() {</span>
+        <span class="highlight">return this.#age;</span>
+    <span class="highlight">}</span>
+}
+
+//at index.js
+let person1 = new Person('Sabrina', 21);
+let person2 = new Person('Dani', 23)
+
+if (person1 > person2) {
+    console.log(person1 . "is older than " . person2);
+} else {
+    <span class="highlight">console.log(person2 . "is older than " . person1);</span>
+};</pre>
+                    <p class="result"><span class="highlight">Dani is older than Sabrina</span></p>
+                </div>
+                <p>In case <strong>valueOf()</strong> is not declared, the <strong>toString()</strong> value will be used to compare.</p>
+                <h3>Destructuring objects</h3>
+                <h3>Combining objects</h3>
+            </section>
+        </main>
+        <!-- End of JavaScript content -->
+        <!-- Start of PHP content -->
+        <main id="php" class="grid-container hidden">
+            <aside class="grid-item">
+                <ul>
+                    <li>Section 2</li>
+                    <li>Section 3</li>
+                    <li>Section 4</li>
+                </ul>
+            </aside>
+            <section class="grid-item">
+                <p>PHP</p>
+            </section>
+        </main>
+        <!-- End of PHP content -->
+        <!-- Start of HTML content -->
+        <main id="html" class="grid-container hidden">
+            <aside class="grid-item">
+                <ul>
+                    <li>Section 1</li>
+                    <li>Section 2</li>
+                    <li>Section 3</li>
+                    <li>Section 4</li>
+                </ul>
+            </aside>
+            <section class="grid-item">
+                <p>HTML</p>
+            </section>
+        </main>
+        <!-- End of HTML content -->
+        <!-- Start of CSS content -->
+        <main id="css" class="grid-container hidden">
+            <aside class="grid-item">
+                <p class="aside-category">CSS basic</p>
+                <ul>
+                    <li><a href="#padding">padding</a></li>
+                    <li>Section 2</li>
+                    <li>Section 3</li>
+                    <li>Section 4</li>
+                </ul>
+            </aside>
+            <section class="grid-item">
+                <h2>CSS</h2>
+                <h3 id="padding">Padding</h3>
+                <p>Padding is used to create space around an element's content, inside of any defined borders.</p>
+            </section>
+        </main>
+        <!-- End of CSS content -->
+        <!-- Start of JSON content -->
+        <main id="json" class="grid-container hidden">
+            <aside class="grid-item">
+                <ul>
+                    <li>Section 1</li>
+                    <li>Section 2</li>
+                    <li>Section 3</li>
+                    <li>Section 4</li>
+                </ul>
+            </aside>
+            <section class="grid-item">
+                <p>JSON</p>
+            </section>
+        </main>
+        <!-- End of JSON content -->
+    </main>
+</body>
+
+</html>
