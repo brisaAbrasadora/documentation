@@ -27,6 +27,26 @@
     width: 75%;
 }
 
+#news {
+    width: 25%;
+    border-style: dotted;
+    border-color: black;
+    border-width: 1px;
+    margin-top: 10px;
+    padding: 0px 10px 10px 10px;
+}
+
+.log {
+    border-style: dotted;
+    border-color: black;
+    border-width: 1px;
+    margin-top: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
 .grid-container {
     display: grid;
     width: 80%;
@@ -79,7 +99,9 @@
     padding: 10px;
 }
 
-ul {
+
+
+.aside-list {
     margin: 0px 0px 0px 10px;
     padding: 0;
     list-style: none;

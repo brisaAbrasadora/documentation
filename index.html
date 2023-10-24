@@ -17,6 +17,7 @@
     </section>
     <section class="nav-container">
         <nav id="mainNav">
+            <a name="news" href="#news">News</a>
             <a name="java" href="#java">Java</a>
             <a name="javascript" href="#javascript">JavaScript</a>
             <a name="php" href="#php">PHP</a>
@@ -26,15 +27,39 @@
         </nav>
     </section>
     <main id="content-container">
+        <!-- Start of News content -->
+        <main id="news">
+            <h2 class="center">What's new</h2>
+            <h3 class="center">10/24/2023</h3>
+            <section class="log">
+                <ul>
+                    <li>Web uploaded to GitHub</li>
+                    <li>Created at JavaScript</li>
+                    <ul>
+                        <li>Objects</li>
+                        <ul>
+                            <li>String value</li>
+                            <li>Primitive value</li>
+                            <li>Destructuring objects</li>
+                            <li>Combining objects</li>
+                        </ul>
+
+                    </ul>
+                    <li>Created at CSS</li>
+                    <ul>
+                        <li>CSS basic</li>
+                        <ul>
+                            <li>Padding</li>
+                        </ul>
+                    </ul>
+                </ul>
+            </section>
+        </main>
+        <!-- End of News content -->
         <!-- Start of Java content -->
         <main id="java" class="grid-container hidden">
             <aside class="grid-item">
-                <p class="aside-category">Data types</p>
-                <ul>
-                    <li>Section 1</li>
-                    <li>Section 2</li>
-                    <li>Section 3</li>
-                    <li>Section 4</li>
+                <ul class="aside-list">
                 </ul>
             </aside>
             <section class="grid-item">
@@ -46,15 +71,15 @@
         <main id="javascript" class="grid-container hidden">
             <aside class="grid-item">
                 <p class="aside-category">NPX</p>
-                <ul>
+                <ul class="aside-list">
                     <li><a name="npx-def" href="#npx-def">Definition</a></li>
                 </ul>
                 <p class="aside-category">Objects</p>
-                <ul>
+                <ul class="aside-list">
                     <li><a name="obj-string-value" href="#obj-string-value">String value</a></li>
                     <li><a name="obj-primitive-value" href="#obj-primitive-value">Primitive value</a></li>
-                    <li><a name="" href="">Destructuring objects</a></li>
-                    <li><a name="" href="">Combining objects</a></li>
+                    <li><a name="" href="#destr-obj">Destructuring objects</a></li>
+                    <li><a name="" href="#comb-obj">Combining objects</a></li>
                 </ul>
                 <p class="aside-category">Promises</p>
             </aside>
@@ -64,9 +89,12 @@
                 <p>To complete from class of 17/10/2023</p>
                 <h2>Objects</h2>
                 <h3 id="obj-string-value">String value</h3>
-                <p id="text-container">When an object is converted to a string, or printed directly, the <strong>toString()</strong> method
+                <p id="text-container">When an object is converted to a string, or printed directly, the
+                    <strong>toString()</strong> method
                     inherited from the
-                    class <strong>Object</strong> is called. By default, it prints "[object Object]", but we can override the method on our class.</p>
+                    class <strong>Object</strong> is called. By default, it prints "[object Object]", but we can
+                    override the method on our class.
+                </p>
                 <div class="grid-code">
                     <pre class="code">
 // at person.class.js
@@ -92,8 +120,11 @@ console.log(person1);</pre>
                 </div>
                 <h3 id="obj-primitive-value">Primitive value</h3>
                 <span class="highlight">
-                    <p id="text-container">When comparing objects using relational operators, the <strong>primitive value</strong> of the object
-                        is obtained and compared using the <strong>valueOf()</strong> method inherited from the class <strong>Object</strong>.</p>
+                    <p id="text-container">When comparing objects using relational operators, the <strong>primitive
+                            value</strong> of the object
+                        is obtained and compared using the <strong>valueOf()</strong> method inherited from the class
+                        <strong>Object</strong>.
+                    </p>
                 </span>
                 <div class="grid-code">
                     <pre class="code">
@@ -127,38 +158,30 @@ if (person1 > person2) {
 };</pre>
                     <p class="result"><span class="highlight">Dani is older than Sabrina</span></p>
                 </div>
-                <p>In case <strong>valueOf()</strong> is not declared, the <strong>toString()</strong> value will be used to compare.</p>
-                <h3>Destructuring objects</h3>
-                <h3>Combining objects</h3>
+                <p>In case <strong>valueOf()</strong> is not declared, the <strong>toString()</strong> value will be
+                    used to compare.</p>
+                <h3 id="destr-obj">Destructuring objects</h3>
+                <h3 id="comb-obj">Combining objects</h3>
             </section>
         </main>
         <!-- End of JavaScript content -->
         <!-- Start of PHP content -->
         <main id="php" class="grid-container hidden">
             <aside class="grid-item">
-                <ul>
-                    <li>Section 2</li>
-                    <li>Section 3</li>
-                    <li>Section 4</li>
+                <ul class="aside-list">
                 </ul>
             </aside>
             <section class="grid-item">
-                <p>PHP</p>
             </section>
         </main>
         <!-- End of PHP content -->
         <!-- Start of HTML content -->
         <main id="html" class="grid-container hidden">
             <aside class="grid-item">
-                <ul>
-                    <li>Section 1</li>
-                    <li>Section 2</li>
-                    <li>Section 3</li>
-                    <li>Section 4</li>
+                <ul class="aside-list">
                 </ul>
             </aside>
             <section class="grid-item">
-                <p>HTML</p>
             </section>
         </main>
         <!-- End of HTML content -->
@@ -166,32 +189,25 @@ if (person1 > person2) {
         <main id="css" class="grid-container hidden">
             <aside class="grid-item">
                 <p class="aside-category">CSS basic</p>
-                <ul>
+                <ul class="aside-list">
                     <li><a href="#padding">padding</a></li>
-                    <li>Section 2</li>
-                    <li>Section 3</li>
-                    <li>Section 4</li>
                 </ul>
             </aside>
             <section class="grid-item">
-                <h2>CSS</h2>
+                <h2>CSS basic</h2>
                 <h3 id="padding">Padding</h3>
                 <p>Padding is used to create space around an element's content, inside of any defined borders.</p>
+                <p>The order is TOP - RIGHT - BOTTOM - LEFT</p>
             </section>
         </main>
         <!-- End of CSS content -->
         <!-- Start of JSON content -->
         <main id="json" class="grid-container hidden">
             <aside class="grid-item">
-                <ul>
-                    <li>Section 1</li>
-                    <li>Section 2</li>
-                    <li>Section 3</li>
-                    <li>Section 4</li>
+                <ul class="aside-list">
                 </ul>
             </aside>
             <section class="grid-item">
-                <p>JSON</p>
             </section>
         </main>
         <!-- End of JSON content -->
