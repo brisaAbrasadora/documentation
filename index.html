@@ -161,7 +161,114 @@ if (person1 > person2) {
                 <p>In case <strong>valueOf()</strong> is not declared, the <strong>toString()</strong> value will be
                     used to compare.</p>
                 <h3 id="destr-obj">Destructuring objects</h3>
+                <p>We can destructure object properties. This means we can set up an object and declare its properties
+                    easily.<br>
+                We set an object that serves as a template. Later on, we declare two variables that matches the object attributes
+                and asign the values from the template. We can now access to those values from another variable, keeping us safe from
+                altering the original value. We can access to the data more efficiently.</p>
+                <p>In this example, we have an object with three attributes. Then, we will create the variables name and age, which are
+                names of the attributes we want to access to. The id attribute is ignored.</p>
+                <div class="grid-code">
+                    <pre class="code">
+let user1 = {
+    id: 1,
+    name: 'Vivi',
+    age: 18,
+};
+
+const {<span class="highlight">name</span>, <span class="highlight">age</span>} = user1;
+
+console.log(`My name is ${<span class="highlight">name</span>} and I am ${<span class="highlight">age</span>}`);</pre>
+                    <p class="result">My name is <span class="highlight">Vivi</span> and I am <span class="highlight">18</span></p>
+                </div>
+                <p>It is required to know the exact name of the attribute we want to access, but we can rename it for the part of the
+                code we are working with and access to the attributes from different objects, since in the previous example the variables
+                name and age are declared and no longer modifiable. Here is shown that an object created with a class can also be destructured.</p>
+                <div class="grid-code">
+                    <pre class="code">
+class User {
+    id;
+    name;
+    age;
+
+    constructor(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    };
+};
+
+let user1 = {
+    id: 1,
+    name: 'Vivi',
+    age: 18,
+};
+
+let user2 = new User(2, 'Didi', 23);
+
+const {<span class="highlight">name: nickname</span>, <span class="highlight">age: howOld</span>} = user1;
+
+console.log(`My name is ${<span class="highlight">nickname</span>} and I am ${<span class="highlight">howOld</span>}`);
+
+const {<span class="highlight">name: nickname2</span>, age: <span class="highlight">howOld2</span>} = user2;
+
+console.log(`My name is ${<span class="highlight">nickname2</span>} and I am ${<span class="highlight">howOld2</span>}`);</pre>
+                    <p class="result">My name is Vivi and I am 18<br>
+                        My name is Didi and I am 23</p>
+                </div>
+                <p>An object can also be destructured on a function!</p>
+                <div class="grid-code">
+                    <pre class="code">
+function printUserData({name, age}, otherInfo = "None") {
+    console.log('User name: ', name);
+    console.log('User age: ', age);
+    console.log('Other info: ', otherInfo);
+}
+
+let user1 = {
+    id: 1,
+    name: 'Vivi',
+    age: 18,
+};
+
+
+printUserData(user1);</pre>
+                    <p class="result">User name:  Vivi<br>
+                        User age:  18<br>
+                        Other info:  None</p>
+                </div>
                 <h3 id="comb-obj">Combining objects</h3>
+                <p>We can use object destructuration to create new objects combining properties
+                    from 2 or more objects. When a property is present in 2 or more objects, the last
+                    object's value will remain.</p>
+                <div class="grid-code">
+                    <pre class="code">
+function configGame(options) {
+    let defaults = {
+        name: 'Player 1',
+        level: 1,
+        difficulty: 'normal',
+        genre: 'male',
+    };
+
+    let config = {...defaults, ...options};
+    console.log(config);
+};
+
+let options = {
+    name: 'Vivianne Gorch',
+    genre: 'female',
+};
+
+configGame(options);</pre>
+                    <pre class="result">
+{
+    name: 'Vivianne Gorch',
+    level: 1,
+    difficulty: 'normal',
+    genre: 'female'
+}</pre>
+                </div>
             </section>
         </main>
         <!-- End of JavaScript content -->
